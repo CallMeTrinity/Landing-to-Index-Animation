@@ -1,0 +1,93 @@
+.gray {
+    background-color: var(--text);
+    width: 50vw;
+    height: 100vh;
+}
+
+.white {
+    background-color: var(--white);
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+}
+
+.logoLanding {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 10%;
+}
+
+@keyframes slideOutLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+body.loaded .gray {
+    animation: slideOutLeft 1.5s forwards;
+}
+
+body.loaded .white {
+    animation: slideOutRight 1.5s forwards;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.cover {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#mainContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+body.loaded-fade .content-to-fade {
+    animation: fadeOut 1s forwards;
+}
+
+
+.name, .job {
+    font-weight: 2000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+}
+
+.name {
+    color: var(--white);
+    margin-top: 1em;
+    margin-left: 1em;
+    text-align: left;
+
+}
+
+.job {
+    color: var(--text);
+    margin-top: 1em;
+    margin-right: 1em;
+    text-align: right;
+}

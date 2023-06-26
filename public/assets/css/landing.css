@@ -1,0 +1,61 @@
+:root {
+    --main: #587494;
+    --text: #212121;
+    --white: #fffdfd;
+    --highlight: #cc0000;
+}
+
+body {
+ display: flex;
+}
+
+.gray {
+    background-color: var(--text);
+    width: 50%;
+    height: 100vh;
+}
+
+.white {
+    background-color: var(--white);
+    width: 50%;
+    height: 100vh;
+}
+
+a img.logoLanding {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 30%;
+}
+
+.name, .job {
+    font-weight: 2000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+}
+
+.name {
+    color: var(--white);
+    margin-top: 1em;
+    margin-left: 1em;
+    text-align: left;
+    
+}
+
+.job {
+    color: var(--text);
+    margin-top: 1em;
+    margin-right: 1em;
+    text-align: right;
+}
+
+
+@keyframes rotationAndScale {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) scale(0.33) rotate(360deg); }
+}
+
+.animate {
+    animation: rotationAndScale 2s forwards ease-in-out;
+}
